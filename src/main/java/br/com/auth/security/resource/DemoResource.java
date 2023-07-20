@@ -1,4 +1,4 @@
-package br.com.auth.security.demo;
+package br.com.auth.security.resource;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/demo-controller")
-public class DemoController {
+public class DemoResource {
 
     @GetMapping
     public ResponseEntity<String> sayHello() {

@@ -1,5 +1,6 @@
 package br.com.auth.security.config;
 
+import br.com.auth.security.filter.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

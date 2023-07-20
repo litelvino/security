@@ -1,5 +1,6 @@
-package br.com.auth.security.config;
+package br.com.auth.security.filter;
 
+import br.com.auth.security.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

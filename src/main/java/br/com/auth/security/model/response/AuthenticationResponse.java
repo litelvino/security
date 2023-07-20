@@ -1,4 +1,4 @@
-package br.com.auth.security.auth;
+package br.com.auth.security.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

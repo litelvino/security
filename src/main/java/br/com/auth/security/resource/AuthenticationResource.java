@@ -1,5 +1,9 @@
-package br.com.auth.security.auth;
+package br.com.auth.security.resource;
 
+import br.com.auth.security.model.request.AuthenticationRequest;
+import br.com.auth.security.model.request.RegisterRequest;
+import br.com.auth.security.model.response.AuthenticationResponse;
+import br.com.auth.security.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
-public class AuthenticationController {
+public class AuthenticationResource {
 
     private final AuthenticationService authenticationService;
 

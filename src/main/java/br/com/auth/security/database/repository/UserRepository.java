@@ -1,5 +1,6 @@
-package br.com.auth.security.user;
+package br.com.auth.security.database.repository;
 
+import br.com.auth.security.database.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

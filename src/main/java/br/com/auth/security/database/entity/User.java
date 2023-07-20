@@ -1,5 +1,6 @@
-package br.com.auth.security.user;
+package br.com.auth.security.database.entity;
 
+import br.com.auth.security.model.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

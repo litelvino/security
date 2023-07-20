@@ -1,6 +1,6 @@
 package br.com.auth.security.config;
 
-import br.com.auth.security.user.UserRepository;
+import br.com.auth.security.database.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

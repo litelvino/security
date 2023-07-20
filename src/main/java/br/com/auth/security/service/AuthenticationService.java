@@ -1,9 +1,11 @@
-package br.com.auth.security.auth;
+package br.com.auth.security.service;
 
-import br.com.auth.security.config.JwtService;
-import br.com.auth.security.user.Role;
-import br.com.auth.security.user.User;
-import br.com.auth.security.user.UserRepository;
+import br.com.auth.security.model.request.AuthenticationRequest;
+import br.com.auth.security.model.request.RegisterRequest;
+import br.com.auth.security.model.response.AuthenticationResponse;
+import br.com.auth.security.model.enums.Role;
+import br.com.auth.security.database.entity.User;
+import br.com.auth.security.database.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
