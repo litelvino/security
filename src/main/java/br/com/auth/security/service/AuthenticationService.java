@@ -22,8 +22,15 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
-    public AuthenticationResponse register(RegisterRequest request) {
+    public AuthenticationResponse register(RegisterRequest request) throws Exception {
 
+        var user = userRepository.findByEmail(request.getEmail());
+        if (user.isPresent()) throw new Exception("Username already exists!");
+
+        return saveUser(request);
+    }
+
+    private AuthenticationResponse saveUser(RegisterRequest request) {
         var user = User.builder()
                 .firstname(request.getFirstname())
                 .lastname(request.getLastname())
@@ -40,7 +47,6 @@ public class AuthenticationService {
                 .token(jwtToken)
                 .build();
     }
-
 
 
     public AuthenticationResponse authenticate(AuthenticationRequest request) {

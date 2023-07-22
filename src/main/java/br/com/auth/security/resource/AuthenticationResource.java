@@ -21,7 +21,7 @@ public class AuthenticationResource {
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
-    ) {
+    ) throws Exception {
         return ResponseEntity.ok(authenticationService.register(request));
     }
 
