@@ -12,19 +12,21 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "_user")
+@Table(name = "tb_usuario")
 public class User implements UserDetails {
 
     @Id
-    // @GeneratedValue(strategy = GenerationType.UUID)
-    @GeneratedValue
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+
+    //@GeneratedValue
+    private UUID id;
     private String name;
     private String email;
     private String password;

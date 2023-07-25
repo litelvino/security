@@ -42,7 +42,7 @@ public class JwtService {
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 //.setExpiration(new Date(System.currentTimeMillis() + 1000 * 5))
-                .setExpiration(new Date(System.currentTimeMillis() * 1000 * 60 * 24)) // todo 24 horas
+                .setExpiration(new Date(new Date().getTime() + 60000)) // 1 minuto
                 .signWith(getSignInKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
